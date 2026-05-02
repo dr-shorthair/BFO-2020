@@ -78,7 +78,7 @@ graph RL
 
     classDef BFO fill:#F5AD27,color:#060606
 
-  ```
+```
 
 ## Basic Formal Ontology - Independent Continuant Hierarchy
 ```mermaid
@@ -108,9 +108,39 @@ graph RL
 
 ```
 
+## Basic Formal Ontology - Immaterial Entity Hierarchy
+```mermaid
+graph RL
+	B(continuant):::BFO-->A(entity):::BFO
+	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	F(independent<br> continuant):::BFO-->B(continuant):::BFO
+	G(material entity):::BFO-->F(independent<br> continuant):::BFO
+	H(immaterial<br> entity):::IC-->F(independent<br> continuant):::BFO
+	O(site):::IC-->H(immaterial<br> entity):::IC
+	P(spatial<br> region):::IC-->H(immaterial<br> entity):::IC
+	Q(continuant fiat<br> boundary):::IC-->H(immaterial<br> entity):::IC
+	R(fiat<br> point):::IC-->Q(continuant fiat<br> boundary):::IC
+	S(fiat<br> surface):::IC-->Q(continuant fiat<br> boundary):::IC
+	T(fiat<br> line):::IC-->Q(continuant fiat<br> boundary):::IC
+	VD(zero-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	U(one-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	V(two-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	W(three-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	X(fiat object part):::BFO-->G(material<br> entity):::BFO
+	Y(object<br> aggregate):::BFO-->G(material<br> entity):::BFO
+	Z(object):::BFO-->G(material<br> entity):::BFO
+
+	classDef BFO fill:#F5AD27,color:#060606
+    classDef IC fill:#ADF5AD,color:#060606
+
+```
+
 ## Common Core Ontologies - GeospatialOntology Module
 ```mermaid
 graph RL
+	B(continuant):::BFO-->A(entity):::BFO
+	F(independent<br> continuant):::BFO-->B(continuant):::BFO
 	G(material entity):::IC-->F(independent<br> continuant):::BFO
 	H(immaterial<br> entity):::IC-->F(independent<br> continuant):::BFO
 	O(site):::IC-->H(immaterial<br> entity):::IC
@@ -138,11 +168,32 @@ graph RL
 	U(one-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
 	V(two-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
 	W(three-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	C(occurrent):::BFO-->A(entity):::BFO
 
-    classDef BFO fill:#F5BD27,color:#060606
-    classDef IC fill:#BDF5BD,color:#060606
-    classDef GS fill:#BDBDF5,color:#060606
+    classDef BFO fill:#F5AD27,color:#060606
+    classDef IC fill:#ADF5AD,color:#060606
+    classDef GS fill:#ADADF5,color:#060606
 
-  ```
+```
 
-  ```
+  ## Common Core Ontologies - InformationEntityOntology Module
+```mermaid
+graph RL
+	B(continuant):::BFO-->A(entity):::BFO
+	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	E1(Information<br>Content Entity):::IE-->E(generically dependent<br> continuant):::BFO
+	E11(Descriptive Information<br>Content Entity):::IE-->E1(Information<br>Content Entity):::IE
+	E12(Designative Information<br>Content Entity):::IE-->E1(Information<br>Content Entity):::IE
+	E13(Media<br>Content Entity):::IE-->E1(Information<br>Content Entity):::IE
+	E14(Prescriptive Information<br>Content Entity):::IE-->E1(Information<br>Content Entity):::IE
+	E15(Representational Information<br>Content Entity):::IE-->E1(Information<br>Content Entity):::IE
+	F(independent<br> continuant):::BFO-->B(continuant):::BFO
+	G(material entity):::BFO-->F(independent<br> continuant):::BFO
+	H(immaterial<br> entity):::IC-->F(independent<br> continuant):::BFO
+
+    classDef BFO fill:#F5AD27,color:#060606
+    classDef IC fill:#ADF5AD,color:#060606
+    classDef IE fill:#F5ADAD,color:#060606
+
+```
