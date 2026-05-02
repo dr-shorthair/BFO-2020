@@ -42,7 +42,7 @@ These documents are licensed under the terms of  the [Creative Commons Attributi
 graph RL
 	B(continuant):::BFO-->A(entity):::BFO
 	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
-	E(generically dependent<br> continuant):::BFO:::BFO-->B(continuant)
+	E(generically dependent<br> continuant):::BFO-->B(continuant)
 	F(independent<br> continuant):::BFO-->B(continuant):::BFO
 	G(material entity):::BFO-->F(independent<br> continuant):::BFO
 	H(immaterial<br> entity):::BFO-->F(independent<br> continuant):::BFO
