@@ -83,22 +83,22 @@ graph RL
 ## Basic Formal Ontology - Independent Continuant Hierarchy
 ```mermaid
 graph RL
-	B(continuant)-->A(entity):::BFO
-	D(specifically dependent<br> continuant):::BFO-->B(continuant)
-	E(generically dependent<br> continuant):::BFO-->B(continuant)
-	F(independent<br> continuant):::BFO-->B(continuant)
+	B(continuant):::BFO-->A(entity):::BFO
+	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	F(independent<br> continuant):::BFO-->B(continuant):::BFO
 	G(material entity):::IC-->F(independent<br> continuant):::BFO
-	H(immaterial<br> entity):::IC-->F(independent<br> continuant)
-	O(site):::IC-->H(immaterial<br> entity):::BFO
-	P(spatial<br> region):::IC-->H(immaterial<br> entity)
-	Q(continuant fiat<br> boundary):::IC-->H(immaterial<br> entity)
-	R(fiat<br> point):::IC-->Q(continuant fiat<br> boundary):::BFO
-	S(fiat<br> surface):::IC-->Q(continuant fiat<br> boundary)
-	T(fiat<br> line):::IC-->Q(continuant fiat<br> boundary)
-	VD(zero-dimensional<br> spatial region):::IC-->P(spatial<br> region):::BFO
-	U(one-dimensional<br> spatial region):::IC-->P(spatial<br> region):::BFO
-	V(two-dimensional<br> spatial region):::IC-->P(spatial<br> region):::BFO
-	W(three-dimensional<br> spatial region):::IC-->P(spatial<br> region):::BFO
+	H(immaterial<br> entity):::IC-->F(independent<br> continuant):::BFO
+	O(site):::IC-->H(immaterial<br> entity):::IC
+	P(spatial<br> region):::IC-->H(immaterial<br> entity):::IC
+	Q(continuant fiat<br> boundary):::IC-->H(immaterial<br> entity):::IC
+	R(fiat<br> point):::IC-->Q(continuant fiat<br> boundary):::IC
+	S(fiat<br> surface):::IC-->Q(continuant fiat<br> boundary):::IC
+	T(fiat<br> line):::IC-->Q(continuant fiat<br> boundary):::IC
+	VD(zero-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	U(one-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	V(two-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
+	W(three-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
 	X(fiat object part):::BFO-->G(material<br> entity):::BFO
 	Y(object<br> aggregate):::BFO-->G(material<br> entity):::BFO
 	Z(object):::BFO-->G(material<br> entity):::BFO
