@@ -79,3 +79,35 @@ graph RL
     classDef BFO fill:#F5AD27,color:#060606
 
   ```
+
+## Basic Formal Ontology - Independent Continuant Hierarchy
+```mermaid
+graph RL
+	B(continuant)-->A(entity):::BFO
+	D(specifically dependent<br> continuant)-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO-->B(continuant)
+	F(independent<br> continuant)-->B(continuant)
+	G(material entity)-->F(independent<br> continuant):::BFO
+	H(immaterial<br> entity)-->F(independent<br> continuant)
+	O(site):::BFO-->H(immaterial<br> entity):::BFO
+	P(spatial<br> region):::BFO-->H(immaterial<br> entity)
+	Q(continuant fiat<br> boundary):::BFO-->H(immaterial<br> entity)
+	R(fiat<br> point):::BFO-->Q(continuant fiat<br> boundary):::BFO
+	S(fiat<br> surface):::BFO-->Q(continuant fiat<br> boundary)
+	T(fiat<br> line):::BFO-->Q(continuant fiat<br> boundary)
+	VD(zero-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
+	U(one-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
+	V(two-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
+	W(three-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
+	X(fiat object part):::BFO-->G(material<br> entity):::BFO
+	Y(object<br> aggregate):::BFO-->G(material<br> entity):::BFO
+	Z(object):::BFO-->G(material<br> entity):::BFO
+	C(occurrent):::BFO-->A(entity):::BFO
+	AA(process):::BFO-->C(occurrent):::BFO
+	AB(process<br> boundary):::BFO-->C(occurrent)
+	AC(temporal<br> region):::BFO-->C(occurrent)
+	AD(spatiotemporal<br> region):::BFO-->C(occurrent)
+
+    classDef BFO fill:#F5AD27,color:#060606
+
+  ```
