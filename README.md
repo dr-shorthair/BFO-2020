@@ -37,6 +37,27 @@ These documents are licensed under the terms of  the [Creative Commons Attributi
 * [Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), formerly Director of Clinical and Translational Data Exchange, University at Buffalo
 * [John Beverley](https://johnbeverley.com/), Assistant Professor, University at Buffalo; President, National Center for Ontological Research, Inc.
 
+## Basic Formal Ontology Hierarchy - top levels
+```mermaid
+graph RL
+	B(continuant)-->A(entity):::BFO
+	D(specifically dependent<br> continuant)-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO-->B(continuant)
+	F(independent<br> continuant)-->B(continuant)
+	G(material entity)-->F(independent<br> continuant):::BFO
+	H(immaterial<br> entity)-->F(independent<br> continuant)
+	I(quality)-->D(specifically dependent<br> continuant):::BFO
+	J(realizable<br> entity):::BFO-->D(specifically dependent<br> continuant)
+	C(occurrent):::BFO-->A(entity):::BFO
+	AA(process):::BFO-->C(occurrent):::BFO
+	AB(process<br> boundary):::BFO-->C(occurrent)
+	AC(temporal<br> region):::BFO-->C(occurrent)
+	AD(spatiotemporal<br> region):::BFO-->C(occurrent)
+	AE(history):::BFO-->AA(process):::BFO
+
+    classDef BFO fill:#F5AD27,color:#060606
+
+```
 ## Basic Formal Ontology Hierarchy
 ```mermaid
 graph RL
