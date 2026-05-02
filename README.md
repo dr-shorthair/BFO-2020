@@ -111,7 +111,7 @@ graph RL
 ## Common Core Ontologies - GeospatialOntology Module
 ```mermaid
 graph RL
-	G(material entity):::IC-->F(independent<br> continuant):::BFO
+	G(material entity):::BFO-->F(independent<br> continuant):::BFO
 	H(immaterial<br> entity):::IC-->F(independent<br> continuant):::BFO
 	O(site):::IC-->H(immaterial<br> entity):::IC
 	O1(Geospatial<br>Region):::GS-->O(site):::IC
