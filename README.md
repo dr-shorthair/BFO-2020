@@ -40,19 +40,19 @@ These documents are licensed under the terms of  the [Creative Commons Attributi
 ## Basic Formal Ontology Hierarchy - top levels
 ```mermaid
 graph RL
-	B(continuant)-->A(entity):::BFO
-	D(specifically dependent<br> continuant)-->B(continuant):::BFO
-	E(generically dependent<br> continuant):::BFO-->B(continuant)
-	F(independent<br> continuant)-->B(continuant)
-	G(material entity)-->F(independent<br> continuant):::BFO
-	H(immaterial<br> entity)-->F(independent<br> continuant)
-	I(quality)-->D(specifically dependent<br> continuant):::BFO
-	J(realizable<br> entity):::BFO-->D(specifically dependent<br> continuant)
+	B(continuant):::BFO-->A(entity):::BFO
+	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO:::BFO-->B(continuant)
+	F(independent<br> continuant):::BFO-->B(continuant):::BFO
+	G(material entity):::BFO-->F(independent<br> continuant):::BFO
+	H(immaterial<br> entity):::BFO-->F(independent<br> continuant):::BFO
+	I(quality):::BFO-->D(specifically dependent<br> continuant):::BFO
+	J(realizable<br> entity):::BFO-->D(specifically dependent<br> continuant):::BFO
 	C(occurrent):::BFO-->A(entity):::BFO
 	AA(process):::BFO-->C(occurrent):::BFO
-	AB(process<br> boundary):::BFO-->C(occurrent)
-	AC(temporal<br> region):::BFO-->C(occurrent)
-	AD(spatiotemporal<br> region):::BFO-->C(occurrent)
+	AB(process<br> boundary):::BFO-->C(occurrent):::BFO
+	AC(temporal<br> region):::BFO-->C(occurrent):::BFO
+	AD(spatiotemporal<br> region):::BFO-->C(occurrent):::BFO
 	AE(history):::BFO-->AA(process):::BFO
 
     classDef BFO fill:#F5AD27,color:#060606
@@ -61,24 +61,24 @@ graph RL
 ## Basic Formal Ontology Hierarchy
 ```mermaid
 graph RL
-	B(continuant)-->A(entity):::BFO
-	D(specifically dependent<br> continuant)-->B(continuant):::BFO
-	E(generically dependent<br> continuant):::BFO-->B(continuant)
-	F(independent<br> continuant)-->B(continuant)
-	G(material entity)-->F(independent<br> continuant):::BFO
-	H(immaterial<br> entity)-->F(independent<br> continuant)
-	I(quality)-->D(specifically dependent<br> continuant):::BFO
-	J(realizable<br> entity):::BFO-->D(specifically dependent<br> continuant)
+	B(continuant):::BFO-->A(entity):::BFO
+	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	E(generically dependent<br> continuant):::BFO-->B(continuant):::BFO
+	F(independent<br> continuant):::BFO-->B(continuant):::BFO
+	G(material entity):::BFO-->F(independent<br> continuant):::BFO
+	H(immaterial<br> entity):::BFO-->F(independent<br> continuant)
+	I(quality):::BFO-->D(specifically dependent<br> continuant):::BFO
+	J(realizable<br> entity):::BFO-->D(specifically dependent<br> continuant):::BFO
 	K(relational<br> quality):::BFO-->I(quality):::BFO
 	L(role):::BFO-->J(realizable<br> entity):::BFO
-	M(disposition):::BFO-->J(realizable<br> entity)
-	N(function):::BFO-->M(disposition)
+	M(disposition):::BFO-->J(realizable<br> entity):::BFO
+	N(function):::BFO-->M(disposition):::BFO
 	O(site):::BFO-->H(immaterial<br> entity):::BFO
-	P(spatial<br> region):::BFO-->H(immaterial<br> entity)
-	Q(continuant fiat<br> boundary):::BFO-->H(immaterial<br> entity)
+	P(spatial<br> region):::BFO-->H(immaterial<br> entity):::BFO
+	Q(continuant fiat<br> boundary):::BFO-->H(immaterial<br> entity):::BFO
 	R(fiat<br> point):::BFO-->Q(continuant fiat<br> boundary):::BFO
-	S(fiat<br> surface):::BFO-->Q(continuant fiat<br> boundary)
-	T(fiat<br> line):::BFO-->Q(continuant fiat<br> boundary)
+	S(fiat<br> surface):::BFO-->Q(continuant fiat<br> boundary):::BFO
+	T(fiat<br> line):::BFO-->Q(continuant fiat<br> boundary):::BFO
 	VD(zero-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
 	U(one-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
 	V(two-dimensional<br> spatial region):::BFO-->P(spatial<br> region):::BFO
@@ -88,9 +88,9 @@ graph RL
 	Z(object):::BFO-->G(material<br> entity):::BFO
 	C(occurrent):::BFO-->A(entity):::BFO
 	AA(process):::BFO-->C(occurrent):::BFO
-	AB(process<br> boundary):::BFO-->C(occurrent)
-	AC(temporal<br> region):::BFO-->C(occurrent)
-	AD(spatiotemporal<br> region):::BFO-->C(occurrent)
+	AB(process<br> boundary):::BFO-->C(occurrent):::BFO
+	AC(temporal<br> region):::BFO-->C(occurrent):::BFO
+	AD(spatiotemporal<br> region):::BFO-->C(occurrent):::BFO
 	AE(history):::BFO-->AA(process):::BFO
 	AF(zero-dimensional<br> temporal region):::BFO-->AC(temporal<br> region):::BFO
 	AI(one-dimensional<br> temporal region):::BFO-->AC(temporal<br> region):::BFO
