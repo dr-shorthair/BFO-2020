@@ -80,35 +80,42 @@ graph RL
 
   ```
 
-## Basic Formal Ontology - Independent Continuant Hierarchy
+## Common Core Ontologies - GeospatialOntology Module
 ```mermaid
 graph RL
 	B(continuant):::BFO-->A(entity):::BFO
-	D(specifically dependent<br> continuant):::BFO-->B(continuant):::BFO
-	E(generically dependent<br> continuant):::BFO-->B(continuant):::BFO
 	F(independent<br> continuant):::BFO-->B(continuant):::BFO
 	G(material entity):::IC-->F(independent<br> continuant):::BFO
 	H(immaterial<br> entity):::IC-->F(independent<br> continuant):::BFO
 	O(site):::IC-->H(immaterial<br> entity):::IC
+	O1(Geospatial<br>Region):::GS-->O(site):::IC
+	O11(Continent):::GS-->O1(Geospatial<br>Region):::GS
+	O12(Geospatial<br>Location):::GS-->O1(Geospatial<br>Region):::GS
+	O13(SubContinent):::GS-->O1(Geospatial<br>Region):::GS
 	P(spatial<br> region):::IC-->H(immaterial<br> entity):::IC
 	Q(continuant fiat<br> boundary):::IC-->H(immaterial<br> entity):::IC
 	R(fiat<br> point):::IC-->Q(continuant fiat<br> boundary):::IC
+	R1(Center of<br>Mass):::GS-->R(fiat<br> point):::IC
+	R2(Geospatial<br>Position):::GS-->R(fiat<br> point):::IC
+	R21(Bounding<br>Box Point):::GS-->R2(Geospatial<br>Position):::GS
 	S(fiat<br> surface):::IC-->Q(continuant fiat<br> boundary):::IC
+	S1(Sea Level):::GS-->S(fiat<br> surface):::IC
 	T(fiat<br> line):::IC-->Q(continuant fiat<br> boundary):::IC
+	T1(One-Dimensional<br>Geospatial Boundary):::GS-->T(fiat<br> line):::IC
+	T12(Geospatial<br>Elipse):::GS-->T1(One-Dimensional<br>Geospatial Boundary):::GS
+	T13(Geospatial<br>Error Region):::GS-->T1(One-Dimensional<br>Geospatial Boundary):::GS
+	T14(Geospatial<br>Line String):::GS-->T1(One-Dimensional<br>Geospatial Boundary):::GS
+	T141(Geospatial<br>Line):::GS-->T14(Geospatial<br>Line String):::GS
+	T142(Geospatial<br>Polygon):::GS-->T14(Geospatial<br>Line String):::GS
+	T1421(Geospatial Region<br>Bounding Box):::GS-->T142(Geospatial<br>Polygon):::GS
 	VD(zero-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
 	U(one-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
 	V(two-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
 	W(three-dimensional<br> spatial region):::IC-->P(spatial<br> region):::IC
-	X(fiat object part):::BFO-->G(material<br> entity):::BFO
-	Y(object<br> aggregate):::BFO-->G(material<br> entity):::BFO
-	Z(object):::BFO-->G(material<br> entity):::BFO
 	C(occurrent):::BFO-->A(entity):::BFO
-	AA(process):::BFO-->C(occurrent):::BFO
-	AB(process<br> boundary):::BFO-->C(occurrent)
-	AC(temporal<br> region):::BFO-->C(occurrent)
-	AD(spatiotemporal<br> region):::BFO-->C(occurrent)
 
     classDef BFO fill:#F5AD27,color:#060606
     classDef IC fill:#ADF527,color:#060606
+    classDef GS fill:#AD27F5,color:#060606
 
   ```
